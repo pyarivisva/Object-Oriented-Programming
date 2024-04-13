@@ -4,19 +4,11 @@
  */
 package login_signup;
 
-import javax.swing.JOptionPane;
-
 public class Login_Page extends javax.swing.JFrame {
 
     int xx, xy;
-    
-    public static String email;
-   public static String password;
-    
     public Login_Page() {
         initComponents();
-        
-            lb_hide_pass.setVisible(false);
     }
 
     void clean(){
@@ -35,15 +27,10 @@ public class Login_Page extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         bt_exit = new javax.swing.JLabel();
-        bt_minimize = new javax.swing.JLabel();
         pict = new javax.swing.JLabel();
-        email_text = new javax.swing.JLabel();
-        pass_text = new javax.swing.JLabel();
-        t_validasi = new javax.swing.JLabel();
-        lb_show_pass = new javax.swing.JLabel();
-        lb_hide_pass = new javax.swing.JLabel();
+        ic_username = new javax.swing.JLabel();
+        ic_password = new javax.swing.JLabel();
         ask_account = new javax.swing.JLabel();
-        show_pass = new javax.swing.JLabel();
         bt_signup = new javax.swing.JButton();
         t_username = new javax.swing.JTextField();
         t_password = new javax.swing.JPasswordField();
@@ -75,51 +62,17 @@ public class Login_Page extends javax.swing.JFrame {
         });
         jPanel1.add(bt_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, -1));
 
-        bt_minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ic_minimize.png"))); // NOI18N
-        bt_minimize.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bt_minimizeMouseClicked(evt);
-            }
-        });
-        jPanel1.add(bt_minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 6, -1, -1));
-
         pict.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture.png"))); // NOI18N
-        jPanel1.add(pict, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
+        jPanel1.add(pict, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, -1, -1));
 
-        email_text.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        email_text.setText("Email Address");
-        jPanel1.add(email_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        ic_username.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/password.png"))); // NOI18N
+        jPanel1.add(ic_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 197, 30, -1));
 
-        pass_text.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        pass_text.setText("Password");
-        jPanel1.add(pass_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
-
-        t_validasi.setForeground(new java.awt.Color(205, 0, 0));
-        jPanel1.add(t_validasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 260, 20));
-
-        lb_show_pass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/uncheck.png"))); // NOI18N
-        lb_show_pass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lb_show_passMouseClicked(evt);
-            }
-        });
-        jPanel1.add(lb_show_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 258, -1, -1));
-
-        lb_hide_pass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check.png"))); // NOI18N
-        lb_hide_pass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lb_hide_passMouseClicked(evt);
-            }
-        });
-        jPanel1.add(lb_hide_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 258, -1, -1));
+        ic_password.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/username.png"))); // NOI18N
+        jPanel1.add(ic_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 147, 30, -1));
 
         ask_account.setText("I don't have an account");
-        jPanel1.add(ask_account, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
-
-        show_pass.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        show_pass.setForeground(new java.awt.Color(102, 102, 102));
-        show_pass.setText("show password");
-        jPanel1.add(show_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 262, -1, -1));
+        jPanel1.add(ask_account, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 300, -1, -1));
 
         bt_signup.setBackground(new java.awt.Color(252, 251, 251));
         bt_signup.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -131,7 +84,7 @@ public class Login_Page extends javax.swing.JFrame {
                 bt_signupActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 70, 30));
+        jPanel1.add(bt_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 295, 70, 30));
 
         t_username.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         t_username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -145,7 +98,7 @@ public class Login_Page extends javax.swing.JFrame {
                 t_usernameFocusLost(evt);
             }
         });
-        jPanel1.add(t_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 260, 36));
+        jPanel1.add(t_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 260, 36));
 
         t_password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         t_password.setText("********");
@@ -163,7 +116,7 @@ public class Login_Page extends javax.swing.JFrame {
                 t_passwordActionPerformed(evt);
             }
         });
-        jPanel1.add(t_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 260, 36));
+        jPanel1.add(t_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 260, 36));
 
         bt_login.setBackground(new java.awt.Color(255, 102, 0));
         bt_login.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -174,7 +127,7 @@ public class Login_Page extends javax.swing.JFrame {
                 bt_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 260, 34));
+        jPanel1.add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 260, 34));
 
         logo_login.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         logo_login.setForeground(new java.awt.Color(255, 102, 0));
@@ -183,17 +136,17 @@ public class Login_Page extends javax.swing.JFrame {
         jPanel1.add(logo_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 130, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 460));
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -219,20 +172,10 @@ public class Login_Page extends javax.swing.JFrame {
     }//GEN-LAST:event_t_passwordActionPerformed
 
     private void bt_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginActionPerformed
-        if(t_password.getText().equals(Signup_Page.password)&&(t_username.getText().equals(Signup_Page.email))){
-           email = t_username.getText();
-           password = t_password.getText();
-
         Home_Page home = new Home_Page();
         home.setVisible(true);
-        JOptionPane.showMessageDialog(null, "Login berhasil!", "Notifikasi", JOptionPane.INFORMATION_MESSAGE);
-        this.dispose();
-       }
-       else{
-           t_validasi.setText("Your password or email is invalid");
-           JOptionPane.showMessageDialog(null, "Login gagal. Silakan coba lagi.", "Notifikasi", JOptionPane.ERROR_MESSAGE);
-       } 
 
+        this.dispose();
     }//GEN-LAST:event_bt_loginActionPerformed
 
     private void t_usernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_t_usernameFocusGained
@@ -271,22 +214,6 @@ public class Login_Page extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bt_signupActionPerformed
 
-    private void bt_minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_minimizeMouseClicked
-        this.setState(1);
-    }//GEN-LAST:event_bt_minimizeMouseClicked
-
-    private void lb_hide_passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_hide_passMouseClicked
-        lb_show_pass.setVisible(true);
-        lb_hide_pass.setVisible(false);
-        t_password.setEchoChar('*');
-    }//GEN-LAST:event_lb_hide_passMouseClicked
-
-    private void lb_show_passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_show_passMouseClicked
-        lb_show_pass.setVisible(false);
-        lb_hide_pass.setVisible(true);
-        t_password.setEchoChar((char)0);
-    }//GEN-LAST:event_lb_show_passMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -314,8 +241,6 @@ public class Login_Page extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -330,18 +255,13 @@ public class Login_Page extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel bt_exit;
     private javax.swing.JButton bt_login;
-    private javax.swing.JLabel bt_minimize;
     private javax.swing.JButton bt_signup;
-    private javax.swing.JLabel email_text;
+    private javax.swing.JLabel ic_password;
+    private javax.swing.JLabel ic_username;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lb_hide_pass;
-    private javax.swing.JLabel lb_show_pass;
     private javax.swing.JLabel logo_login;
-    private javax.swing.JLabel pass_text;
     private javax.swing.JLabel pict;
-    private javax.swing.JLabel show_pass;
     private javax.swing.JPasswordField t_password;
     private javax.swing.JTextField t_username;
-    private javax.swing.JLabel t_validasi;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,7 +23,6 @@ public class Home_Page extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         bt_exit = new javax.swing.JLabel();
-        bt_minimize = new javax.swing.JLabel();
         pict = new javax.swing.JLabel();
         welcome = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
@@ -52,34 +51,26 @@ public class Home_Page extends javax.swing.JFrame {
         });
         jPanel1.add(bt_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, -1));
 
-        bt_minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ic_minimize.png"))); // NOI18N
-        bt_minimize.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bt_minimizeMouseClicked(evt);
-            }
-        });
-        jPanel1.add(bt_minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 6, -1, -1));
-
         pict.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture.png"))); // NOI18N
-        jPanel1.add(pict, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+        jPanel1.add(pict, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
 
         welcome.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         welcome.setForeground(new java.awt.Color(255, 102, 0));
         welcome.setText("Hi, Welcome!");
-        jPanel1.add(welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 270, 60));
+        jPanel1.add(welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 270, 60));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 460));
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -99,10 +90,6 @@ public class Home_Page extends javax.swing.JFrame {
     private void bt_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_exitMouseClicked
         dispose();
     }//GEN-LAST:event_bt_exitMouseClicked
-
-    private void bt_minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_minimizeMouseClicked
-        this.setState(1);
-    }//GEN-LAST:event_bt_minimizeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -149,7 +136,6 @@ public class Home_Page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JLabel bt_exit;
-    private javax.swing.JLabel bt_minimize;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel pict;
     private javax.swing.JLabel welcome;
